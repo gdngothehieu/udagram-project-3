@@ -26,3 +26,8 @@ script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker push e596aaaa7545/udagram-api-feed:v1
 # Do similar for other three images
+deploy:
+provider:script
+script:bash docker_push
+on:
+branch:dockerhub
