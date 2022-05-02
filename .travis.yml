@@ -20,12 +20,13 @@ install:
   - docker-compose -f deployment/docker/docker-compose-build.prod.yaml build --parallel
 
 deploy:
-  - skip_cleanup: true
   - provider: script
     script: bash deployment/docker/publish.sh
+    skip_cleanup: true
     on:
       branch: master
   - provider: script
     script: bash deployment/k8s/deploy.sh
+    skip_cleanup: true
     on:
       branch: master
