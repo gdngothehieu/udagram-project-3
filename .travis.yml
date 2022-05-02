@@ -20,7 +20,6 @@ install:
   - docker-compose -f deployment/docker/docker-compose-build.prod.yaml build --parallel
 
 deploy:
-  - edge: true
   - skip_cleanup: true
   - provider: script
     script: bash deployment/docker/publish.sh
