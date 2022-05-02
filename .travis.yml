@@ -22,11 +22,11 @@ install:
 deploy:
   - provider: script
     script: bash deployment/docker/publish.sh
-    skip_cleanup: true
+    # skip_cleanup: true
     on:
       branch: master
   - provider: script
     script: bash deployment/k8s/deploy.sh
-    skip_cleanup: true
+    # skip_cleanup: true
     on:
       branch: master
