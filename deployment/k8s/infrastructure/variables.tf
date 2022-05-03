@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 variable "cluster_name" {
-  description = "Name of the cluster"
+  description = "aws-first-eks-cluster"
 }
 
 variable "worker_os" {
@@ -56,7 +56,7 @@ variable "ssh_agent_socket" {
 # Provider specific settings
 
 variable "aws_region" {
-  default     = "eu-west-3"
+  default     = "ap-southeast-1"
   description = "AWS region to speak to"
 }
 
