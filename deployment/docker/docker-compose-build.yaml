@@ -3,18 +3,18 @@ services:
   reverseproxy:
     build:
       context: .
-    image: stevecarrupt/udagram-reverseproxy
+    image: e596aaaa7545/udagram-reverseproxy
   backend_user:
     build:
       context: ../../api-user
-    image: stevecarrupt/udagram-api-user
+    image: e596aaaa7545/udagram-api-user
   backend_feed:
     build:
       context: ../../api-feed  
-    image: stevecarrupt/udagram-api-feed
+    image: e596aaaa7545/udagram-api-feed
   frontend:
     build:
       context: ../../frontend
       args:
         - BUILD_ENV=development
-    image: stevecarrupt/udagram-frontend:local
+    image: e596aaaa7545/udagram-frontend:local

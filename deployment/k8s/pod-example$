@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeU1EUXpNREF6TkRjMU1sb1hEVE15TURReU56QXpORGMxTWxvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTFcwCjl3MzVDVjRqQlNvQklpOVpYTmJXRTE1NnpzVHpkN2VrdWJxTXo0clBjU1haZy9ZaU85K1locW55UDgwaDlKc0MKK0ZJSFdkTldCTHZhMHhuMURUM2tERWRnMTNJZ1l0WTlZZ2kwMmFGamdMV1JRZ0VkQWtrTUlEUmw2OGxZd2VpQwo4WUxWaWFLTXJzcmx5SXRrYjViNGUzdEZ1VjQ2NTFlV2hJelZaaVRxaXlER3B1VzdZZ3FSbEtSR2VCcFFZckttClI0QkZwVUVabTRRK3ozWlQxZFZpelZkSi8zU3ZOOXpuZjdxTGJDUWNubzVGQXl3eWRCVWNPYVA0cmlWaWRIMVMKSjdqejRTR3FoTk5aRDZJbGN1Y0RZcktETW5pTTJrU0hpWEpkQUY5aXN6VEdGUzhPUWdVaHF5NUdJa3lzc1RqVwptTitjVkJsZXE2TERWL25qM0gwQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZGbkhPUisrWlYvT1I5THNkRjRoNlVmUnM5UDdNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFBNHNxU1dVWC84alFwOXF2K2lQemkzVmZJWGtoV0p6OTQ1MWxVQ3Y5NExXVzh6L3I2dgoxb2VhQWpDcy83eG5jRFRjNWI4dGxma1pET1gxOTdIVTU0VEp2di9CUXlNbmNzRE5CN3V6UmczN3hNV2srOXpNCnhuZzh2RCtkVlFrdlllMFNvMTFJbjBLMjk1UmwvMTdHQXM3dmhxQndYelVJVnh5QU81eGkwM3c4bkJUQVdJakoKeS9zamRyQnp2a3I1WFpnRDU2MHZCeS82MGkzczVMNHVFOVZ0dFZUK2FSa2kyc1pXK3Z6dDBibHhENUJLSkdVLwpwczJ1RHRUOVdxeSsxKzBDSVVWbGNjdEFveDFxQ2ZSaGEzcW5CVDd1RnV1czZLM1Y2aWpmQVZ1TU1LUEsxbWdHCncrMXZSUVFPUTFiZjRMSnRqZUFIVmxndWVoUE1kcVZxMnN4bAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://59AFFEBE4D42DDAF4ADAD6FB4C5C71E5.sk1.ap-southeast-1.eks.amazonaws.com
+  name: arn:aws:eks:ap-southeast-1:138733096911:cluster/aws-first-eks-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-southeast-1:138733096911:cluster/aws-first-eks-cluster
+    user: arn:aws:eks:ap-southeast-1:138733096911:cluster/aws-first-eks-cluster
+  name: arn:aws:eks:ap-southeast-1:138733096911:cluster/aws-first-eks-cluster
+current-context: arn:aws:eks:ap-southeast-1:138733096911:cluster/aws-first-eks-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-southeast-1:138733096911:cluster/aws-first-eks-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - ap-southeast-1
+      - eks
+      - get-token
+      - --cluster-name
+      - aws-first-eks-cluster
+      command: aws

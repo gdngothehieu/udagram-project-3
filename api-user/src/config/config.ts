@@ -8,7 +8,7 @@ export const config = {
     "aws_reigion": process.env.AWS_REGION || "ap-southeast-1",
     "aws_profile": process.env.AWS_PROFILE ,
     "aws_media_bucket": process.env.AWS_BUCKET || "arn:aws:s3:::my-aws-bucket-primary-one",
-    "url": process.env.URL    || "http://localhost:4200/"
+    "url": process.env.URL || "http://localhost:8100"
   },
   "prod": {
     "username": process.env.POSTGRESS_USERNAME || "postgres",

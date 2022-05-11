@@ -12,7 +12,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: stevecarrupt/udagram-reverseproxy
+      - image: e596aaaa7545/udagram-reverseproxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:

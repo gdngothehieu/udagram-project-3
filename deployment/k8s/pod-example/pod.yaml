@@ -4,7 +4,7 @@ metadata:
   name: pod-example
 spec:
   containers:
-  - image: stevecarrupt/udagram-reverseproxy
+  - image: e596aaaa7545/reverseproxy
     name: reverseproxy
     imagePullPolicy: Always          
     resources:
