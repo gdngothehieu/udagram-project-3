@@ -1,3 +1,2 @@
 # udagram
-project 3 of udacity nd9990
-
+Project 3 Udacity deploying microservice
