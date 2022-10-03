@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
-data:
-  AWS_BUCKET: {{AWS_BUCKET}}
-  AWS_PROFILE: {{AWS_PROFILE}}
-  AWS_REGION: {{AWS_REGION}}
-  POSTGRESS_DB: {{POSTGRESS_DB}}
-  POSTGRESS_HOST: {{POSTGRESS_HOST}}
-  URL: {{APP_URL}}
 metadata:
   name: env-config
-  
+data:
+  POSTGRES_USERNAME: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_HOST: database-1.cfhfiutlkgvd.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: database_dev
+  AWS_BUCKET: arn:aws:s3:::udagram-best-bucket-ever-hieunt114
+  AWS_REGION: us-east-1
+  JWT_SECRET: jwt_secret
+  URL: http://localhost:8100
