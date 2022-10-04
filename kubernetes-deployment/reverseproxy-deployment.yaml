@@ -13,16 +13,40 @@ spec:
         run: reverseproxy
     spec:
       containers:
-      - name: reverseproxy
-        image: docker.io/e596aaaa7545/udagram-reverseproxy:v1
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: 1000m
-          requests:
-            cpu: 500m
-
+        - name: reverseproxy
+          image: docker.io/e596aaaa7545/udagram-reverseproxy:v1
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 500m
+          env:
+            - name: POSTGRESS_USERNAME
+              value: "postgres"
+            - name: POSTGRESS_PASSWORD
+              value: "postgres"
+            - name: POSTGRES_HOST
+              value: "database-1.cfhfiutlkgvd.us-east-1.rds.amazonaws.com"
+            - name: POSTGRES_DB
+              value: "database_dev"
+            - name: POSTGRES_USERNAME
+              value: "postgres"
+            - name: POSTGRES_USERNAME
+              value: "postgres"
+            - name: AWS_BUCKET
+              value: "arn:aws:s3:::udagram-best-bucket-ever-hieunt114"
+            - name: AWS_REGION
+              value: "us-east-1"
+            - name: JWT_SECRET
+              value: "jwt_secret"
+            - name: URL
+              value: "http://localhost:8080"
+            - name: POSTGRES_USERNAME
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
 ---
 apiVersion: v1
 kind: Service
@@ -32,8 +56,8 @@ metadata:
   name: reverseproxy
 spec:
   ports:
-  - name: "8080"
-    port: 8080
-    targetPort: 8080
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
   selector:
     service: reverseproxy
